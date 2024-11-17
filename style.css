@@ -1,0 +1,28 @@
+.upperBackground {
+  width: 100%;
+  height: 500px;
+  background-color: #7ec7d8;
+  position: relative;
+}
+.titleBox {
+  position: absolute;
+  top: 150px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  /* width: 500px;
+  height: 100px; */
+}
+
+.titleText {
+  font-size: 80px;
+  font-family: "MS Gothic", sans-serif;
+  color: #ffffff;
+}
+
+.square {
+  width: 500px;
+  height: 100px;
+  background-color: skyblue;
+}
