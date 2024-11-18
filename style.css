@@ -1,24 +1,33 @@
 .upperBackground {
   width: 100%;
-  height: 500px;
+  height: 1000px;
   background-color: #7ec7d8;
   position: relative;
 }
 .titleBox {
+  padding: 20px;
   position: absolute;
   top: 150px;
   left: 0;
   right: 0;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  /*均等配置 */
+  justify-content: space-around;
+  align-items: center;
   text-align: center;
-  /* width: 500px;
-  height: 100px; */
 }
 
 .titleText {
-  font-size: 80px;
-  font-family: "MS Gothic", sans-serif;
+  font-size: 80px; /* ボタンのフォントサイズを調整 */
+  font-family: "MS Gothic", sans-serif; /*フォントはゴシック */
   color: #ffffff;
+  padding: 10px 20px; /* ボタンの内側の余白を設定 */
+  border: none; /* 枠線をなくす */
+  border-radius: 5px; /* 角を丸くする */
+  cursor: pointer; /* カーソルをポインターに変更 */
 }
 
 .square {
@@ -27,7 +36,7 @@
   background-color: skyblue;
 }
 
-.myself {
+/* .tabButton {
   opacity: 0;
   animation: 1s fadeIn 1s forwards;
 }
@@ -41,4 +50,35 @@
     opacity: 1;
     transform: translateY(0);
   }
+} */
+
+.scrollable {
+  overflow-y: scroll;
+  height: 500px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  top: 150px;
+  position: relative;
+}
+
+#tabControl a {
+  display: inline-block; /* インラインブロック要素に変更 */
+  border-width: 1px 1px 0 1px; /* ボーダーの太さを設定 */
+  border-style: solid; /*ボーダーのスタイルを設定(実線)*/
+  border-color: black; /* ボーダーの色を設定 */
+  padding: 10px 20px; /* ボタンの内側の余白を設定 */
+  text-decoration: none; /* テキストの下線をなくす */
+  color: white; /* テキストの色を設定 */
+  background-color: #4169e1; /* ボタンの背景色を設定 */
+  font-weight: bold; /* テキストの太さを設定 */
+  position: relative; /* 相対配置 */
+}
+
+#tabControl a:hover {
+  text-decoration: underline; /* マウスオーバー時にテキストに下線を追加 */
 }
