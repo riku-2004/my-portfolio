@@ -36,9 +36,56 @@
   background-color: skyblue;
 }
 
-/* .tabButton {
+.smallSquare {
+  width: 300px;
+  height: 100px;
+  background-color: skyblue;
+}
+
+.kaisetuSquare {
+  width: 300px;
+  height: 100px;
+  background-color: cyan;
+  position: relative;
+}
+
+.tabButton {
   opacity: 0;
   animation: 1s fadeIn 1s forwards;
+}
+
+.tabText {
+  font-size: 40px; /* ボタンのフォントサイズを調整 */
+  font-family: "MS Gothic", sans-serif; /*フォントはゴシック */
+  color: #ffffff;
+  padding: 10px 20px; /* ボタンの内側の余白を設定 */
+  border: none; /* 枠線をなくす */
+  border-radius: 5px; /* 角を丸くする */
+  cursor: pointer; /* カーソルをポインターに変更 */
+}
+
+/* .smallButton1 .smallButton2 .smallButton3 {
+  margin: 10px 0;
+  padding: 10px;
+  text-align: center;
+  display: block;
+  width: 100%;
+  font-size: 20px;
+  color: black;
+  background-color: #d1ecf1;
+  border-radius: 10px;
+  border: 1px solid #bee5eb;
+} */
+
+.smallText {
+  display: block;
+  font-size: 20px;
+  font-family: "ヒラギノ丸ゴ ProN", "Helvetica";
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @keyframes fadeIn {
@@ -50,7 +97,7 @@
     opacity: 1;
     transform: translateY(0);
   }
-} */
+}
 
 .scrollable {
   overflow-y: scroll;
@@ -77,8 +124,29 @@
   background-color: #4169e1; /* ボタンの背景色を設定 */
   font-weight: bold; /* テキストの太さを設定 */
   position: relative; /* 相対配置 */
+  cursor: pointer; /* カーソルをポインターに変更 */
+}
+
+#tabControl a.hover {
+  background-color: #3557b2; /* アクティブ時の背景色を設定 */
 }
 
 #tabControl a:hover {
   text-decoration: underline; /* マウスオーバー時にテキストに下線を追加 */
+}
+/* デフォルトだと何も表示されない */
+.tabContent {
+  display: none;
+}
+/* activeの時だけ表示される */
+.tabContent.active {
+  display: block;
+}
+
+#aboutButton {
+  display: none;
+}
+
+.tabContent.active #aboutButton {
+  display: block;
 }

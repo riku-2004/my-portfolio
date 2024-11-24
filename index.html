@@ -10,34 +10,50 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <p id="tabControl">
-      <a href="#top">TOP</a>
-      <a href="#about">ABOUT</a>
-      <a href="#contact">CONTACT</a>
-      <a href="#nazo">NAZO</a>
-    </p>
+    <div id="tabControl">
+      <a href="#top" data-target="top">TOP</a>
+      <a href="#about" data-target="about">ABOUT</a>
+      <a href="#contact" data-target="contact">CONTACT</a>
+      <a href="#nazo" data-target="nazo">NAZO</a>
+    </div>
     <div id="tabBody">
-      <div id="top"></div>
-      <div id="about"></div>
-      <div id="contact"></div>
-      <div id="nazo"></div>
-    </div>
-    <div class="upperBackground"></div>
-    <h1 class="titleBox titleText">ポートフォリオサイト</h1>
-    <!-- <div class="buttonContainer">
-      <button id="top" class="tabButton tabText">TOP</button>
-      <button id="about" class="tabButton tabText">ABOUT</button>
-      <button id="contact" class="tabButton tabText">CONTACT</button>
-    </div> -->
+      <div id="top" class="tabContent active">
+        <div class="upperBackground"></div>
+        <h1 class="titleBox titleText">ポートフォリオサイト</h1>
+        <p>Copyright &copy; 2022 Riku</p>
+      </div>
 
-    <div class="tabButton">
-      <button id="myselfButton" class="square">自己紹介</button>
-      <p id="name"></p>
-      <p id="birthday"></p>
-      <p id="hometown"></p>
+      <div id="about" class="tabContent">
+        <div id="aboutButton" class="tabButton">
+          <button id="myselfButton" class="square tabText">自己紹介</button>
+          <span id="name" class="smallText"></span>
+          <span id="birthday" class="smallText"></span>
+          <span id="hometown" class="smallText"></span>
+          <span id="hobby" class="smallText"></span>
+          <img id="pic1" width="300" />
+          <img id="pic2" width="300" />
+        </div>
+      </div>
+      <div id="contact" class="tabContent">
+        <div id="aboutButton" class="tabButton">
+          <button id="snsButton" class="square tabText">SNSなど</button>
+          <p id="instagram" class="smallText"></p>
+        </div>
+      </div>
+      <div id="nazo" class="tabContent">
+        <img src="nazo.png" width="700" />
+        <div id="choices-container">
+          <button id="choice-1" class="smallSquare tabText">カメ</button>
+          <button id="choice-2" class="smallSquare tabText">リス</button>
+          <button id="choice-3" class="smallSquare tabText">カバ</button>
+          <button id="kaisetu" class="kaisetuSquare tabText">
+            解説はこちら
+          </button>
+          <span id="kaisetuText" class="smallText"></span>
+        </div>
+      </div>
     </div>
 
-    <p>Copyright &copy; 2022 Riku</p>
     <script src="main.js"></script>
   </body>
 </html>
